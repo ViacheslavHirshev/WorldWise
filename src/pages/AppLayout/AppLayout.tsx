@@ -1,5 +1,4 @@
-import { Map } from "../../components/Map/Map";
-import { Sidebar } from "../../components/Sidebar/Sidebar";
+import { Sidebar, Map } from "../../components";
 import styles from "./AppLayout.module.css";
 
 export const AppLayout = () => {

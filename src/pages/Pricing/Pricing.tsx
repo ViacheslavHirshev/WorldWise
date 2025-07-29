@@ -1,5 +1,4 @@
-// Uses the same styles as Product
-import { PageNav } from "../../components/PageNav/PageNav";
+import { PageNav } from "../../components";
 import styles from "./Pricing.module.css";
 
 export const Pricing = () => {

@@ -1,12 +1,15 @@
-// import styles from "./CountryItem.module.css";
+import { ICountry } from "../../types";
+import styles from "./CountryItem.module.css";
 
-// export const CountryItem = ({ country }) => {
-//   return (
-//     <li className={styles.countryItem}>
-//       <span>{country.emoji}</span>
-//       <span>{country.country}</span>
-//     </li>
-//   );
-// }
+interface CountryItemProps {
+  country: ICountry;
+}
 
-// export default CountryItem;
+export const CountryItem = ({ country }: CountryItemProps) => {
+  return (
+    <li className={styles.countryItem}>
+      <span>{country.emoji}</span>
+      <span>{country.country}</span>
+    </li>
+  );
+};

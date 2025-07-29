@@ -1,12 +1,5 @@
+import { formatDate } from "../../utils";
 import styles from "./City.module.css";
-
-const formatDate = (date: Date) =>
-  new Intl.DateTimeFormat("en", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    weekday: "long",
-  }).format(new Date(date));
 
 export const City = () => {
   // TEMP DATA
@@ -55,5 +48,3 @@ export const City = () => {
     </div>
   );
 };
-
-export default City;
