@@ -13,3 +13,8 @@ export interface ICity extends ICountry {
   };
   id: number;
 }
+
+export interface IGeolocationPosition {
+  lat: number;
+  lng: number;
+}

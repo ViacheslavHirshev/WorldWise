@@ -1,15 +1,18 @@
-import { ICity, ICountry } from "../../types";
+import { useCities } from "../../context/CitiesContext";
+import type { ICountry } from "../../types";
 import { CountryItem } from "../CountryItem/CountryItem";
 import Message from "../Message/Message";
 import Spinner from "../Spinner/Spinner";
 import styles from "./CountryList.module.css";
 
-interface CountryListProps {
-  cities: ICity[];
-  isLoading: boolean;
-}
+// interface CountryListProps {
+//   cities: ICity[];
+//   isLoading: boolean;
+// }
 
-export const CountryList = ({ cities, isLoading }: CountryListProps) => {
+export const CountryList = () => {
+  const { cities, isLoading } = useCities();
+
   if (isLoading) return <Spinner />;
   if (cities.length === 0) return <Message message="No countries visited " />;
 

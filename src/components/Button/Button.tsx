@@ -4,7 +4,7 @@ import styles from "./Button.module.css";
 interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
   children: ReactNode;
-  type: "primary" | "back";
+  type: "primary" | "back" | "position";
 }
 
 export const Button = ({ onClick, children, type }: ButtonProps) => {
