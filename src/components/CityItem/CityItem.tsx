@@ -3,13 +3,23 @@ import { ICity } from "../../types";
 import { formatDate } from "../../utils";
 import styles from "./CityItem.module.css";
 import { useCities } from "../../context/CitiesContext";
+import { MouseEvent } from "react";
+import { Spinner } from "../Spinner/Spinner";
 
 interface CityItemProps {
   city: ICity;
 }
 
 export const CityItem = ({ city }: CityItemProps) => {
-  const { currentCity } = useCities();
+  const { currentCity, deleteCity, isLoading } = useCities();
+
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    console.log(city.id);
+    deleteCity(Number(city.id));
+  };
+
+  if (isLoading) return <Spinner />;
 
   return (
     <li>
@@ -24,7 +34,9 @@ export const CityItem = ({ city }: CityItemProps) => {
         <time className={styles.date} dateTime={city.date}>
           {formatDate(new Date(city.date))}
         </time>
-        <button className={styles.deleteBtn}>x</button>
+        <button className={styles.deleteBtn} onClick={handleClick}>
+          x
+        </button>
       </Link>
     </li>
   );

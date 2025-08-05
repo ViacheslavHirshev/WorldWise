@@ -18,3 +18,13 @@ export interface IGeolocationPosition {
   lat: number;
   lng: number;
 }
+
+export interface IGeocodingData {
+  city: string;
+  continent: string;
+  countryCode: string;
+  countryName: string;
+  latitude: number;
+  longtitude: number;
+  locality: string;
+}

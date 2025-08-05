@@ -1,8 +1,8 @@
 import { useCities } from "../../context/CitiesContext";
 import type { ICountry } from "../../types";
 import { CountryItem } from "../CountryItem/CountryItem";
-import Message from "../Message/Message";
-import Spinner from "../Spinner/Spinner";
+import { Message } from "../Message/Message";
+import { Spinner } from "../Spinner/Spinner";
 import styles from "./CountryList.module.css";
 
 // interface CountryListProps {

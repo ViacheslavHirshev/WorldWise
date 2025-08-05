@@ -2,7 +2,7 @@ import type { MouseEventHandler, ReactNode } from "react";
 import styles from "./Button.module.css";
 
 interface ButtonProps {
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   children: ReactNode;
   type: "primary" | "back" | "position";
 }

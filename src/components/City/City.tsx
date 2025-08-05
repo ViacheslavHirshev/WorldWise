@@ -3,18 +3,10 @@ import { useCities } from "../../context/CitiesContext";
 import { formatDate } from "../../utils";
 import styles from "./City.module.css";
 import { useParams } from "react-router-dom";
-import Spinner from "../Spinner/Spinner";
+import { Spinner } from "../Spinner/Spinner";
 import { ButtonBack } from "../ButtonBack/ButtonBack";
 
 export const City = () => {
-  // TEMP DATA
-  // const currentCity = {
-  //   cityName: "Lisbon",
-  //   emoji: "🇵🇹",
-  //   date: "2027-10-31T15:59:59.138Z",
-  //   notes: "My favorite city so far!",
-  // };
-  // const { cityName, emoji, date, notes } = currentCity;
   const { getCity, currentCity, isLoading } = useCities();
   const { id } = useParams();
 
@@ -36,9 +28,7 @@ export const City = () => {
       <div className={styles.row}>
         <h6>You went to {currentCity?.cityName} on</h6>
         <p>
-          {formatDate(
-            new Date(currentCity !== undefined ? currentCity.date : 0)
-          )}
+          {formatDate(currentCity ? new Date(currentCity.date) : new Date())}
         </p>
       </div>
 
