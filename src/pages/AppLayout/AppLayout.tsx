@@ -1,4 +1,4 @@
-import { Sidebar, Map } from "../../components";
+import { Sidebar, Map, User } from "../../components";
 import styles from "./AppLayout.module.css";
 
 export const AppLayout = () => {
@@ -6,6 +6,7 @@ export const AppLayout = () => {
     <div className={styles.app}>
       <Sidebar />
       <Map />
+      <User />
     </div>
   );
 };

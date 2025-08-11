@@ -28,3 +28,10 @@ export interface IGeocodingData {
   longtitude: number;
   locality: string;
 }
+
+export interface IUser {
+  name: string;
+  email: string;
+  password: string;
+  avatar: string;
+}
