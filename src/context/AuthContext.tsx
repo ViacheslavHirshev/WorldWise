@@ -18,9 +18,9 @@ const initialState: IAuthState = {
   isAuthenticated: false,
 };
 
-type Action = { type: "login"; payload: IUser } | { type: "logout" };
+type AuthAction = { type: "login"; payload: IUser } | { type: "logout" };
 
-function reducer(state: IAuthState, action: Action) {
+function reducer(state: IAuthState, action: AuthAction) {
   switch (action.type) {
     case "login":
       return { ...state, user: action.payload, isAuthenticated: true };
